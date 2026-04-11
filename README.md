@@ -1,2 +1,2 @@
 # Leme contabilidade
-preview: nikk7007.github.io/lemecc/
+[PREVIEW](https://nikk7007.github.io/lemecc/)
