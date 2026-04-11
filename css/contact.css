@@ -61,6 +61,8 @@
   border-radius: var(--radius-sm);
 }
 
+.form-group textarea { min-height: 120px; }
+
 .form__submit {
   width: 100%;
   justify-content: center;

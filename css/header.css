@@ -69,6 +69,17 @@
   font-weight: 500;
   color: rgba(255, 255, 255, .7);
   letter-spacing: .02em;
+  position: relative;
+  padding-bottom: 2px;
   transition: color .2s;
 }
+.nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width .22s ease;
+}
 .nav__link:hover { color: var(--accent); }
+.nav__link:hover::after { width: 100%; }
