@@ -1,0 +1,56 @@
+/* ================================================================
+   FOOTER — Rodapé dark com linha accent no topo
+   ================================================================ */
+
+/* ── Estrutura ──────────────────────────────────────────────────── */
+.footer { border-top: 1px solid var(--border); }
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 3rem;
+  padding: 3.5rem 0;
+}
+
+.footer__nav,
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+  padding-top: .25rem;
+}
+
+.footer__bottom { border-top: 1px solid var(--border); }
+.footer__bottom .container { padding-block: 1.25rem; }
+
+/* ── Estilos visuais ────────────────────────────────────────────── */
+.footer {
+  background: #1a2d3e;
+  border-top: 4px solid var(--accent);
+}
+
+.footer__brand img   { margin-bottom: 1rem; }
+.footer__brand p {
+  font-size: .875rem;
+  color: rgba(255, 255, 255, .55);
+  line-height: 1.65;
+  max-width: 30ch;
+}
+
+.footer__nav a,
+.footer__contact a {
+  font-size: .875rem;
+  color: rgba(255, 255, 255, .6);
+  transition: color .2s;
+}
+.footer__nav a:hover,
+.footer__contact a:hover { color: var(--accent); }
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, .1);
+}
+.footer__bottom p {
+  font-size: .8rem;
+  color: rgba(255, 255, 255, .3);
+  text-align: center;
+}

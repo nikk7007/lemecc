@@ -1,0 +1,45 @@
+/* ================================================================
+   VARIABLES — Design tokens do tema claro Leme
+   ================================================================ */
+
+:root {
+  /* Backgrounds */
+  --bg:           #ffffff;
+  --bg-alt:       #eef7fb;
+  --surface:      rgba(110, 193, 228, .1);
+  --surface-hv:   rgba(110, 193, 228, .18);
+
+  /* Borders */
+  --border:       rgba(110, 193, 228, .25);
+  --border-hv:    rgba(110, 193, 228, .6);
+
+  /* Brand colors */
+  --accent:       #6ec1e4;
+  --accent-dk:    #4bacd2;
+  --accent-text:  #1878a0;   /* variante acessível do accent para texto em fundo claro (5.3:1) */
+  --accent-glow:  rgba(110, 193, 228, .2);
+
+  /* Typography */
+  --text:         #1a2d3e;
+  --muted:        rgba(26, 45, 62, .55);
+
+  /* Fonts */
+  --font-display: 'Domine', Georgia, serif;
+  --font-body:    'Sora', system-ui, sans-serif;
+
+  /* Structure */
+  --header-h:     72px;
+  --container:    1160px;
+
+  /* Radii */
+  --radius-sm:    4px;
+  --radius-md:    10px;
+  --radius-lg:    18px;
+
+  /* Shadows & glows */
+  --glow-accent:  0 0 40px rgba(110, 193, 228, .3);
+  --shadow:       0 8px 32px rgba(110, 193, 228, .18);
+
+  /* Spacing */
+  --gap: 1.5rem;
+}

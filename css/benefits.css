@@ -1,0 +1,65 @@
+/* ================================================================
+   BENEFITS — Grid de cards glassmorphism com números watermark
+   ================================================================ */
+
+/* ── Estrutura ──────────────────────────────────────────────────── */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.benefit-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1.625rem;
+}
+
+.benefit-card__icon { margin-bottom: 1.25rem; }
+.benefit-card__icon svg { width: 22px; height: 22px; }
+
+/* ── Estilos visuais ────────────────────────────────────────────── */
+.benefit-card {
+  background: var(--bg);
+  transition: background .25s;
+}
+.benefit-card:hover { background: var(--surface-hv); }
+
+/* Número watermark */
+.benefit-card__num {
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(110, 193, 228, .18);
+  pointer-events: none;
+  user-select: none;
+  transition: color .25s;
+}
+.benefit-card:hover .benefit-card__num {
+  color: rgba(110, 193, 228, .32);
+}
+
+.benefit-card__icon svg { color: var(--accent); }
+
+.benefit-card__title {
+  font-family: var(--font-display);
+  font-size: 1.1875rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: .625rem;
+  line-height: 1.3;
+}
+
+.benefit-card__text {
+  font-size: .875rem;
+  color: var(--muted);
+  line-height: 1.7;
+}

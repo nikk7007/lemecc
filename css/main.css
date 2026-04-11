@@ -1,0 +1,28 @@
+/* ================================================================
+   MAIN — Ponto de entrada: importa todos os módulos CSS
+   ================================================================ */
+
+/* Fontes */
+
+/* Tokens e base */
+@import "variables.css";
+@import "reset.css";
+@import "animations.css";
+
+/* Estrutura */
+@import "layout.css";
+
+/* Componentes globais */
+@import "buttons.css";
+
+/* Seções */
+@import "header.css";
+@import "hero.css";
+@import "benefits.css";
+@import "steps.css";
+@import "plans.css";
+@import "contact.css";
+@import "footer.css";
+
+/* Responsividade (sempre por último) */
+@import "responsive.css";

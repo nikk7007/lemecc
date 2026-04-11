@@ -1,0 +1,64 @@
+/* ================================================================
+   LAYOUT — Container, grid e estrutura genérica de seções
+   ================================================================ */
+
+/* ── Container ─────────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* ── Seções ─────────────────────────────────────────────────────── */
+.section         { padding: 6rem 0; }
+.section--alt    { background: var(--bg-alt); }
+
+.section__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+}
+
+/* ── Cabeçalho de seção: visual ─────────────────────────────────── */
+.section__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .625rem;
+  font-family: var(--font-body);
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  margin-bottom: 1rem;
+}
+.section__tag::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 2.5vw + 1rem, 3rem);
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.section__title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.section__subtitle {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}

@@ -1,0 +1,222 @@
+/* ================================================================
+   HERO — Seção principal com bússola animada e headline editorial
+   ================================================================ */
+
+/* ── Estrutura ──────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 6rem 0 5rem;
+  background: linear-gradient(150deg, #dff0f8 0%, #f2fafd 40%, #ffffff 100%);
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 680px;
+}
+
+.hero__content { display: flex; flex-direction: column; }
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .875rem;
+}
+
+/* Stats */
+.hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.stat { display: flex; flex-direction: column; gap: .25rem; }
+
+.stat__value {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+.stat__label {
+  font-size: .75rem;
+  color: var(--muted);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.stat__sep {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ── Estilos visuais ────────────────────────────────────────────── */
+
+/* Background glows */
+.hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero__glow--1 {
+  top: -20%;
+  right: 5%;
+  width: 55%;
+  height: 70%;
+  background: radial-gradient(ellipse, rgba(110, 193, 228, .22) 0%, transparent 65%);
+  animation: breathe 9s ease-in-out infinite;
+}
+.hero__glow--2 {
+  bottom: -15%;
+  left: -5%;
+  width: 40%;
+  height: 55%;
+  background: radial-gradient(ellipse, rgba(110, 193, 228, .14) 0%, transparent 65%);
+  animation: breathe 12s ease-in-out infinite reverse;
+}
+
+/* Watermark */
+.hero__watermark {
+  position: absolute;
+  bottom: -5%;
+  right: -2%;
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 18vw, 22rem);
+  font-weight: 700;
+  letter-spacing: -.05em;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(110, 193, 228, .18);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Compass element */
+.hero__compass {
+  position: absolute;
+  right: calc((100vw - var(--container)) / 2 + 20px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 480px;
+  height: 480px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.compass__ring {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.compass__ring--1 {
+  inset: 0;
+  border: 1px dashed rgba(110, 193, 228, .4);
+  animation: spin 50s linear infinite;
+}
+.compass__ring--2 {
+  inset: 14%;
+  border: 1px solid rgba(110, 193, 228, .3);
+  animation: spin 30s linear infinite reverse;
+}
+.compass__ring--3 {
+  inset: 29%;
+  border: 1px dashed rgba(110, 193, 228, .5);
+  animation: spin 20s linear infinite;
+}
+
+.compass__cross {
+  position: absolute;
+  inset: 0;
+}
+.compass__line {
+  position: absolute;
+  background: rgba(110, 193, 228, .2);
+}
+.compass__line--v {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+.compass__line--h {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.compass__dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(110, 193, 228, .15), 0 0 24px var(--accent);
+}
+
+/* Hero content animations */
+.hero__badge    { animation: heroFadeUp .5s ease .05s both; }
+.hero__headline { animation: heroFadeUp .7s ease .2s both; }
+.hero__sub      { animation: heroFadeUp .6s ease .38s both; }
+.hero__actions  { animation: heroFadeUp .6s ease .52s both; }
+.hero__stats    { animation: heroFadeUp .6s ease .68s both; }
+
+/* Badge */
+.hero__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: .3rem .875rem;
+  border: none;
+  border-radius: 100px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #1a2d3e;
+  margin-bottom: 1.5rem;
+}
+
+/* Headline */
+.hero__headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 5vw + 1rem, 5.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+.hero__headline em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* Sub */
+.hero__sub {
+  font-size: 1.0625rem;
+  color: var(--muted);
+  max-width: 52ch;
+  line-height: 1.75;
+  margin-bottom: 2.25rem;
+}
