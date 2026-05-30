@@ -9,9 +9,6 @@
   .hero__compass { display: none; }
   .hero__watermark { font-size: 30vw; }
 
-  /* Benefits: 2 columns */
-  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-
   /* Plans: stack */
   .plans-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
 
@@ -31,11 +28,9 @@
     margin: 0;
   }
 
-  /* Contact: single column + centralizado */
-  .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-  .contact-info { align-items: center; text-align: center; }
-  .contact-info__item { flex-direction: column; align-items: center; text-align: center; }
-  .contact-info__cta { align-self: center; }
+  /* Contact: métodos empilhados e centralizados */
+  .contact-info { flex-direction: column; align-items: center; }
+  .contact-info__item { text-align: left; }
 
   /* Footer */
   .footer__inner { grid-template-columns: 1fr 1fr; }
@@ -47,7 +42,13 @@
 
   /* Header */
   .header__cta { display: none; }
-  .hamburger   { display: flex; }
+  .hamburger {
+    display: flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
 
   .nav {
     display: flex;
@@ -63,7 +64,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 1.25rem 1.5rem 1.75rem;
-    gap: 1.125rem;
+    gap: .25rem;
     background: rgba(6, 8, 15, .97);
     border-bottom: 1px solid rgba(110, 193, 228, .2);
     backdrop-filter: blur(12px);
@@ -80,7 +81,10 @@
     font-size: 1rem;
     color: rgba(255, 255, 255, .85);
     position: relative;
-    padding-bottom: 2px;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    width: 100%;
   }
   .nav__link::after {
     content: '';
@@ -103,18 +107,12 @@
   .hero__stats    { gap: 1.5rem; }
   .hero__watermark { display: none; }
 
-  /* Benefits: 1 column */
-  .benefits-grid { grid-template-columns: 1fr; border-radius: var(--radius-md); }
-
-  /* Form row: 1 column */
-  .form-row { grid-template-columns: 1fr; }
+  /* Benefits: 1 coluna */
+  .benefits { grid-template-columns: 1fr; }
 
   /* Hero stats: wrap em telas muito estreitas */
   .hero__stats { flex-wrap: wrap; gap: 1rem; }
   .stat__sep   { display: none; }
-
-  /* Contact form */
-  .contact-form { padding: 1.5rem; }
 
   /* Footer: 1 coluna centralizado */
   .footer__inner {
@@ -126,4 +124,27 @@
   .footer__brand p { margin: 0 auto; }
   .footer__nav,
   .footer__contact { align-items: center; }
+}
+
+/* ── Toque: área de toque mínima de 44px (WCAG 2.5.5) ───────────────── */
+@media (pointer: coarse) {
+  .btn { min-height: 44px; }
+
+  .footer__nav a,
+  .footer__contact a,
+  .contact-info__item a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Em layout desktop com toque (notebook touch), expande a área de toque
+   dos links do nav sem mover o texto */
+@media (pointer: coarse) and (min-width: 769px) {
+  .nav__link::before {
+    content: '';
+    position: absolute;
+    inset: -12px 0;
+  }
 }

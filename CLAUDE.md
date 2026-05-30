@@ -35,21 +35,15 @@ O CSS é modular. O `index.html` carrega apenas `css/main.css`, que importa todo
 | `benefits.css` | Cards de benefícios |
 | `steps.css` | Passos numerados ("Como funciona") |
 | `plans.css` | Cards de planos com variante `.plan--featured` |
-| `contact.css` | Info de contato + formulário + feedback de envio |
+| `contact.css` | Info de contato (WhatsApp · e-mail · horário) + CTA de WhatsApp |
 | `footer.css` | Rodapé escuro |
 | `responsive.css` | Todas as media queries — deve ser sempre o último import |
 
 **Regra:** `responsive.css` contém **todos** os breakpoints centralizados (≤1023px e ≤767px). Não adicionar media queries dentro de outros arquivos de componente.
 
-## Formulário de contato
+## Contato
 
-O form usa [Formspree](https://formspree.io). O endpoint está em `index.html`:
-
-```html
-<form action="https://formspree.io/f/SEU_ID_AQUI" ...>
-```
-
-O `SEU_ID_AQUI` deve ser substituído pelo ID real da conta Formspree antes de publicar. O submit é via `fetch` em `js/main.js` (sem reload de página).
+Não há formulário. A seção de contato (`#contato`) é focada no WhatsApp: três métodos (WhatsApp, e-mail, horário) e um CTA grande para o WhatsApp. Decisão de produto: sem um processo para tratar leads de formulário, toda conversão vai direto para o WhatsApp.
 
 ## Identidade visual
 

@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-29T00:00:00.000Z",
+  "title": "Design System: Leme Contabilidade",
+  "extensions": {
+    "colorMeta": {
+      "sky-cyan": {
+        "role": "primary",
+        "displayName": "Azul-Farol",
+        "canonical": "#6ec1e4",
+        "tonalRamp": [
+          "#0a2230",
+          "#10384b",
+          "#175066",
+          "#1e6a86",
+          "#2f8fae",
+          "#4bacd2",
+          "#6ec1e4",
+          "#9bd6ec",
+          "#c8e9f6",
+          "#eef7fb"
+        ]
+      },
+      "harbor-navy": {
+        "role": "neutral",
+        "displayName": "Navy de Porto",
+        "canonical": "#1a2d3e",
+        "tonalRamp": [
+          "#0c151d",
+          "#13212d",
+          "#1a2d3e",
+          "#2a4459",
+          "#3c5e78",
+          "#557a96",
+          "#7a9ab1",
+          "#a7bece",
+          "#d2e0e9",
+          "#eef3f7"
+        ]
+      },
+      "foam": {
+        "role": "neutral",
+        "displayName": "Espuma",
+        "canonical": "#eef7fb",
+        "tonalRamp": [
+          "#1a2d3e",
+          "#33586f",
+          "#5a8aa3",
+          "#8bb6cb",
+          "#bcdcea",
+          "#dff0f8",
+          "#eef7fb",
+          "#f4fafd",
+          "#f9fdfe",
+          "#ffffff"
+        ]
+      },
+      "cyan-text": {
+        "role": "primary",
+        "displayName": "Ciano-Texto (acessível)",
+        "canonical": "#1878a0",
+        "tonalRamp": [
+          "#06222e",
+          "#0a3445",
+          "#0f475d",
+          "#135c78",
+          "#1878a0",
+          "#2f93bd",
+          "#55add2",
+          "#86c6e1",
+          "#b8dfef",
+          "#e6f4fa"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display / Título",
+        "purpose": "Domine serifa para headline do hero e títulos de seção; ênfase em itálico ciano."
+      },
+      "body": {
+        "displayName": "Corpo",
+        "purpose": "Sora sans para parágrafos, descrições e UI; linha ≤65–75ch."
+      },
+      "label": {
+        "displayName": "Rótulo",
+        "purpose": "Sora uppercase tracked para rótulos de formulário; uso restrito — não repetir como eyebrow."
+      }
+    },
+    "shadows": [
+      {
+        "name": "glow-accent",
+        "value": "0 0 40px rgba(110,193,228,0.3)",
+        "purpose": "Aura do card de plano em destaque e elementos-âncora."
+      },
+      {
+        "name": "glow-button",
+        "value": "0 0 28px rgba(110,193,228,0.35)",
+        "purpose": "Hover do botão primário."
+      },
+      {
+        "name": "shadow-header",
+        "value": "0 2px 32px rgba(0,0,0,0.35)",
+        "purpose": "Separação sutil do header após scroll."
+      },
+      {
+        "name": "focus-input",
+        "value": "0 0 0 3px rgba(110,193,228,0.18)",
+        "purpose": "Anel de foco de campos de formulário."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Easing dos reveals de scroll — saída exponencial serena."
+      },
+      {
+        "name": "spin-slow",
+        "value": "20s–50s linear infinite",
+        "purpose": "Rotação dos anéis da bússola; lenta e contemplativa."
+      },
+      {
+        "name": "breathe",
+        "value": "9s–12s ease-in-out infinite",
+        "purpose": "Glows do hero que pulsam suavemente."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile",
+        "value": "768px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal de conversão; aponta para WhatsApp.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Quero abrir minha empresa</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.8125rem 1.625rem; border-radius: 4px; border: 1.5px solid #6ec1e4; background: #6ec1e4; color: #1a2d3e; font-family: 'Sora', system-ui, sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.02em; line-height: 1; text-decoration: none; transition: background .2s, border-color .2s, box-shadow .2s, transform .15s; } .ds-btn-primary:hover { background: #4bacd2; border-color: #4bacd2; box-shadow: 0 0 28px rgba(110,193,228,.35); transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid #1878a0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Ação secundária ao lado do CTA primário.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Trocar de contador</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.8125rem 1.625rem; border-radius: 4px; border: 1.5px solid rgba(110,193,228,.6); background: transparent; color: #1a2d3e; font-family: 'Sora', system-ui, sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.02em; line-height: 1; text-decoration: none; transition: background .2s, border-color .2s, transform .15s; } .ds-btn-ghost:hover { background: rgba(110,193,228,.18); border-color: #6ec1e4; transform: translateY(-1px); } .ds-btn-ghost:focus-visible { outline: 2px solid #1878a0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Benefit Item",
+      "kind": "custom",
+      "refersTo": "benefit-icon",
+      "description": "Diferencial numa lista editorial (ícone + título + texto), agrupado por espaço, sem card nem número.",
+      "html": "<article class=\"ds-benefit\"><div class=\"ds-benefit__icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2L4 6v6c0 5.5 3.5 10 8 12 4.5-2 8-6.5 8-12V6l-8-4z\"></path></svg></div><div><h3 class=\"ds-benefit__title\">Tudo certo com o Fisco</h3><p class=\"ds-benefit__text\">Cuidamos das suas obrigações dentro do prazo, sem multa nem susto da Receita.</p></div></article>",
+      "css": ".ds-benefit { display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; align-items: start; } .ds-benefit__icon { width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(110,193,228,.1); border: 1px solid rgba(110,193,228,.25); color: #1878a0; } .ds-benefit__icon svg { width: 22px; height: 22px; } .ds-benefit__title { font-family: 'Domine', Georgia, serif; font-size: 1.1875rem; font-weight: 600; color: #1a2d3e; line-height: 1.3; margin-bottom: .4rem; } .ds-benefit__text { font-family: 'Sora', system-ui, sans-serif; font-size: .9375rem; color: #46596b; line-height: 1.7; max-width: 42ch; }"
+    },
+    {
+      "name": "Featured Plan Card",
+      "kind": "card",
+      "refersTo": "card-plan-featured",
+      "description": "Único card elevado, com glow-accent e linha de luz no topo.",
+      "html": "<div class=\"ds-plan\"><span class=\"ds-plan__line\"></span><span class=\"ds-plan__tag\">Plano sob medida</span><p class=\"ds-plan__desc\">Montado conforme o porte e o segmento da sua empresa.</p></div>",
+      "css": ".ds-plan { position: relative; overflow: hidden; padding: 2rem; border-radius: 18px; background: rgba(110,193,228,.05); border: 1px solid rgba(110,193,228,.4); box-shadow: 0 0 0 1px rgba(110,193,228,.15), 0 0 40px rgba(110,193,228,.3); } .ds-plan__line { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 240px; height: 1px; background: #6ec1e4; filter: blur(16px); opacity: .7; } .ds-plan__tag { font-family: 'Domine', Georgia, serif; font-size: 1.375rem; font-weight: 600; color: #1878a0; } .ds-plan__desc { font-family: 'Sora', system-ui, sans-serif; font-size: .8125rem; color: #46596b; margin-top: .375rem; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Link do header navy com underline que cresce da esquerda.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__link\" href=\"#\">Benefícios</a><a class=\"ds-nav__link\" href=\"#\">Planos</a></nav>",
+      "css": ".ds-nav { display: inline-flex; gap: 2rem; background: #1a2d3e; padding: 1rem 1.5rem; } .ds-nav__link { position: relative; font-family: 'Sora', system-ui, sans-serif; font-size: .875rem; font-weight: 500; letter-spacing: .02em; color: rgba(255,255,255,.7); text-decoration: none; padding-bottom: 2px; transition: color .2s; } .ds-nav__link::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 1px; background: #6ec1e4; transition: width .22s ease; } .ds-nav__link:hover { color: #6ec1e4; } .ds-nav__link:hover::after { width: 100%; } .ds-nav__link:focus-visible { outline: 2px solid #6ec1e4; outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Carta Náutica Serena",
+    "overview": "Leme é uma carta de navegação viva: superfície clara quadriculada como papel náutico, uma bússola que gira devagar, tudo apontando para uma direção. Instrumento de orientação, não painel que grita. Azul-farol é água rasa de litoral, navy é o casco e a tinta, o branco com grade é a própria carta. Tom acessível e descomplicado: contabilidade sem juridiquês, que convida a uma conversa no WhatsApp em vez de um formulário burocrático. Rejeita a estética de template de IA: cards idênticos, eyebrows tracked, marcadores 01/02/03, gradientes clichê.",
+    "keyCharacteristics": [
+      "Carta náutica clara: branco texturizado, azul de água rasa, navy de casco.",
+      "Um único accent committed (#6ec1e4) para marca, foco e estado.",
+      "Serifa + sans em contraste de eixo (Domine display / Sora corpo).",
+      "Movimento sereno e lento, nunca agitado.",
+      "Voz que tira peso do empreendedor, não que o impressiona."
+    ],
+    "rules": [
+      {
+        "name": "The One-Hue Rule",
+        "body": "Toda a paleta vive em um único hue ciano sobre navy e branco. Sem segunda cor de marca; a única exceção é o vermelho de erro.",
+        "section": "colors"
+      },
+      {
+        "name": "The Accent-Is-Not-Ink Rule",
+        "body": "#6ec1e4 preenche e ilumina, nunca soletra. Texto na cor da marca usa sempre #1878a0.",
+        "section": "colors"
+      },
+      {
+        "name": "The Italic-Keyword Rule",
+        "body": "Ênfase nos títulos vem de uma única palavra em Domine itálico ciano, nunca de negrito ou caixa-alta.",
+        "section": "typography"
+      },
+      {
+        "name": "The Glow-Not-Drop Rule",
+        "body": "Profundidade é luz de accent difusa, nunca sombra cinza pesada.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do manter #6ec1e4 para preencher e iluminar; texto na cor da marca usa #1878a0.",
+      "Do parear Domine com Sora em contraste de eixo; ênfase via itálico ciano.",
+      "Do usar profundidade por glow, planando superfícies em repouso.",
+      "Do carregar a herança náutica pela composição e vocabulário, não por clichês.",
+      "Do dar a toda animação uma alternativa em prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't usar #6ec1e4 como texto sobre branco (2.02:1).",
+      "Don't deixar texto secundário no muted atual (3.43:1) nem placeholders a 30% (1.84:1); mirar AA 4.5:1.",
+      "Don't repetir o rótulo de seção tracked acima de toda seção (eyebrow de IA).",
+      "Don't numerar cards 01–08 como enfeite nem repetir 8 cards idênticos.",
+      "Don't introduzir segunda cor de marca, gradiente em texto, ou glassmorphism decorativo.",
+      "Don't escrever copy com buzzword corporativa; substantivo concreto + verbo."
+    ]
+  }
+}

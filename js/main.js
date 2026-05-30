@@ -55,8 +55,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ── Contador animado (stat__num[data-count]) ──────────────────
   const counters = document.querySelectorAll(".stat__num[data-count]");
-  if (counters.length) {
+  const prefersReduced = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
+  if (counters.length && !prefersReduced) {
     const ease = (t) => 1 - Math.pow(1 - t, 3); // cubic ease-out
+
+    // Começa do zero para a contagem ler naturalmente (o HTML traz o valor
+    // final, então sem JS / com reduced-motion o número correto já aparece).
+    counters.forEach((el) => {
+      el.textContent = "0";
+    });
 
     const animateCounter = (el) => {
       const target = parseInt(el.dataset.count, 10);
@@ -88,57 +98,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const statsEl = document.querySelector(".hero__stats");
     if (statsEl) statsObserver.observe(statsEl);
-  }
-
-  // ── Máscara de telefone ───────────────────────────────────────
-  const phoneInput = document.getElementById("phone");
-  if (phoneInput) {
-    phoneInput.addEventListener("input", (e) => {
-      let d = e.target.value.replace(/\D/g, "").slice(0, 11);
-      if (d.length <= 10) {
-        d = d.replace(/^(\d{0,2})(\d{0,4})(\d{0,4})$/, (_, a, b, c) =>
-          a ? `(${a}${b ? `) ${b}` : ""}${c ? `-${c}` : ""}` : "",
-        );
-      } else {
-        d = d.replace(/^(\d{2})(\d{5})(\d{0,4})$/, "($1) $2-$3");
-      }
-      e.target.value = d;
-    });
-  }
-
-  // ── Formulário de contato (Formspree via fetch) ───────────────
-  const form = document.getElementById("contact-form");
-  const successMsg = document.getElementById("form-success");
-  const errorMsg = document.getElementById("form-error");
-  const submitBtn = document.getElementById("form-submit");
-
-  if (form) {
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      successMsg.hidden = true;
-      errorMsg.hidden = true;
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Enviando…";
-
-      try {
-        const res = await fetch(form.action, {
-          method: "POST",
-          body: new FormData(form),
-          headers: { Accept: "application/json" },
-        });
-        if (res.ok) {
-          successMsg.hidden = false;
-          form.reset();
-          successMsg.scrollIntoView({ behavior: "smooth", block: "nearest" });
-        } else {
-          errorMsg.hidden = false;
-        }
-      } catch {
-        errorMsg.hidden = false;
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = "Enviar mensagem";
-      }
-    });
   }
 });

@@ -236,7 +236,7 @@
 }
 .hero__headline em {
   font-style: italic;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* Sub */
@@ -245,5 +245,6 @@
   color: var(--muted);
   max-width: 52ch;
   line-height: 1.75;
+  text-wrap: pretty;
   margin-bottom: 2.25rem;
 }

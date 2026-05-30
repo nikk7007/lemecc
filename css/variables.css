@@ -17,11 +17,10 @@
   --accent:       #6ec1e4;
   --accent-dk:    #4bacd2;
   --accent-text:  #1878a0;   /* variante acessível do accent para texto em fundo claro (5.3:1) */
-  --accent-glow:  rgba(110, 193, 228, .2);
 
   /* Typography */
   --text:         #1a2d3e;
-  --muted:        rgba(26, 45, 62, .55);
+  --muted:        rgba(26, 45, 62, .7);   /* texto secundário — 5.1:1+ (WCAG AA) sobre bg e bg-alt */
 
   /* Fonts */
   --font-display: 'Domine', Georgia, serif;
@@ -38,8 +37,10 @@
 
   /* Shadows & glows */
   --glow-accent:  0 0 40px rgba(110, 193, 228, .3);
-  --shadow:       0 8px 32px rgba(110, 193, 228, .18);
 
   /* Spacing */
   --gap: 1.5rem;
+
+  /* Easing — saída exponencial serena, sem bounce */
+  --ease-out-expo:  cubic-bezier(.16, 1, .3, 1);
 }

@@ -43,7 +43,7 @@
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, .25);
+  color: rgba(255, 255, 255, .55);   /* 5.4:1 sobre o navy — AA */
   margin-bottom: .5rem;
 }
 

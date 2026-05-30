@@ -85,18 +85,7 @@
   font-weight: 600;
   color: var(--text);
 }
-.plan-tag--featured { color: var(--accent); }
-
-.plan-popular {
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid rgba(110, 193, 228, .3);
-  border-radius: 100px;
-  padding: .2rem .6rem;
-}
+.plan-tag--featured { color: var(--accent-text); }
 
 .plan-card__desc {
   font-size: .8125rem;
@@ -116,5 +105,4 @@
 .plan-card__features li svg  { color: var(--border-hv); }
 .plan-card__features li.is-accent       { color: var(--text); }
 .plan-card__features li.is-accent svg   { color: var(--accent); }
-.plan-card__features li.is-muted        { opacity: .45; }
 .plan-card__features strong             { color: var(--text); }
