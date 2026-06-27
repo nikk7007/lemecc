@@ -12,10 +12,10 @@
   gap: 2.75rem;
 }
 
-/* Métodos de contato em linha (WhatsApp · E-mail · Horário) */
+/* Métodos de contato em grade 2×2 (WhatsApp · E-mail / Instagram · Horário) */
 .contact-info {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
   justify-content: center;
   gap: 1.5rem 3rem;
 }

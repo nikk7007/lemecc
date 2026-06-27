@@ -28,7 +28,7 @@
 
   /* Structure */
   --header-h:     72px;
-  --container:    1160px;
+  --container:    960px;   /* = largura do conteúdo mais largo; header/footer não passam disso */
 
   /* Radii */
   --radius-sm:    4px;
@@ -40,6 +40,9 @@
 
   /* Spacing */
   --gap: 1.5rem;
+  --container-pad:    1.5rem;   /* padding-inline padrão dos contêineres */
+  --section-y:        6rem;     /* respiro vertical padrão das seções */
+  --section-y-sm:     4rem;     /* idem no mobile */
 
   /* Easing — saída exponencial serena, sem bounce */
   --ease-out-expo:  cubic-bezier(.16, 1, .3, 1);

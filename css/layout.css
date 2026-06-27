@@ -22,11 +22,11 @@
   width: 100%;
   max-width: var(--container);
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: var(--container-pad);
 }
 
 /* ── Seções ─────────────────────────────────────────────────────── */
-.section         { padding: 6rem 0; }
+.section         { padding: var(--section-y) 0; }
 .section--alt    { background: var(--bg-alt); }
 
 .section__header {
