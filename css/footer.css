@@ -64,6 +64,14 @@
   background: var(--accent);
   transition: width .22s ease;
 }
+.footer__address {
+  font-style: normal;
+  font-size: .8125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, .5);
+  margin-top: .25rem;
+}
+
 .footer__nav a:hover,
 .footer__contact a:hover { color: var(--accent); }
 .footer__nav a:hover::after,

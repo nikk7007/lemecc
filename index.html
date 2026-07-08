@@ -9,9 +9,43 @@
     </script>
     <meta
       name="description"
-      content="Leme Contabilidade: empresa contábil em Limeira, com 35 anos de mercado, planos personalizados e atendimento especializado para PMEs em todo o estado de São Paulo."
+      content="Empresa contábil em Limeira com 35 anos de mercado. Abertura de empresa, troca de contador e contabilidade completa para PMEs em todo o estado de SP."
     />
-    <title>Leme Contabilidade: Precisão Contábil para o seu Negócio</title>
+    <title>Contabilidade em Limeira | Leme Contabilidade</title>
+    <link rel="canonical" href="https://lemecc.com.br/" />
+
+    <!-- Open Graph / redes sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Leme Contabilidade" />
+    <meta property="og:url" content="https://lemecc.com.br/" />
+    <meta
+      property="og:title"
+      content="Contabilidade em Limeira | Leme Contabilidade"
+    />
+    <meta
+      property="og:description"
+      content="Empresa contábil em Limeira com 35 anos de mercado. Abertura de empresa, troca de contador e contabilidade completa para PMEs em todo o estado de SP."
+    />
+    <meta property="og:image" content="https://lemecc.com.br/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Leme Contabilidade — empresa contábil em Limeira, 35 anos de mercado"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Contabilidade em Limeira | Leme Contabilidade"
+    />
+    <meta
+      name="twitter:description"
+      content="Empresa contábil em Limeira com 35 anos de mercado. Abertura de empresa, troca de contador e contabilidade para PMEs em todo o estado de SP."
+    />
+    <meta name="twitter:image" content="https://lemecc.com.br/assets/og-image.jpg" />
+    <meta name="theme-color" content="#6ec1e4" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,6 +53,39 @@
       href="https://fonts.googleapis.com/css2?family=Domine:wght@400;600;700&family=Sora:wght@300;400;500;600&display=swap"
     />
     <link rel="stylesheet" href="css/main.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AccountingService",
+        "name": "Leme Contabilidade",
+        "url": "https://lemecc.com.br/",
+        "image": "https://lemecc.com.br/assets/logo.png",
+        "description": "Empresa contábil em Limeira com 35 anos de mercado: abertura de empresa, troca de contador e contabilidade completa para PMEs.",
+        "telephone": "+55-19-98783-4833",
+        "email": "lemecc@lemecc.com.br",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Samuel Chequi, 107 - Jardim Montezuma",
+          "addressLocality": "Limeira",
+          "addressRegion": "SP",
+          "postalCode": "13480-355",
+          "addressCountry": "BR"
+        },
+        "areaServed": {
+          "@type": "State",
+          "name": "São Paulo"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        "sameAs": ["https://instagram.com/leme.contabilidade"]
+      }
+    </script>
   </head>
   <body>
     <a href="#home" class="skip-link">Pular para o conteúdo</a>
@@ -137,23 +204,15 @@
       <div class="container">
         <div class="about">
           <div class="about__media" data-reveal>
-            <!-- ponytail: placeholder — trocar por foto real da contadora (ex.: assets/contadora.jpg) -->
-            <div
-              class="about__photo about__photo--placeholder"
-              aria-hidden="true"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.25"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="8" r="4" />
-                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-              </svg>
-            </div>
+            <img
+              src="assets/foto_contadora.jpeg"
+              alt="Nilva Maria Leme, contadora à frente da Leme Contabilidade em Limeira"
+              class="about__photo"
+              width="1086"
+              height="1448"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div class="about__body" data-reveal data-delay="100">
             <span class="section__tag">Quem cuida de você</span>
@@ -660,6 +719,10 @@
             rel="noopener noreferrer"
             >@leme.contabilidade</a
           >
+          <address class="footer__address">
+            Rua Samuel Chequi, 107 — Jardim Montezuma<br />
+            Limeira/SP · CEP 13480-355
+          </address>
         </div>
       </div>
       <div class="footer__bottom">

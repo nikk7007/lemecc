@@ -13,30 +13,15 @@
 
 /* ── Foto / placeholder ─────────────────────────────────────────── */
 .about__photo {
+  display: block;
+  width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
   border-radius: var(--radius-lg);
-  overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--glow-accent);
-}
-.about__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.about__photo--placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--surface);
-  color: var(--accent-text);
-}
-.about__photo--placeholder svg {
-  width: 38%;
-  height: 38%;
-  opacity: 0.55;
 }
 
 /* ── Texto ──────────────────────────────────────────────────────── */
