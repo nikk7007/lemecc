@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página não encontrada | Leme Contabilidade</title>
+    <link rel="canonical" href="https://lemecc.com.br/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400;600;700&family=Sora:wght@300;400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      .error-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .error-page__glow {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.15;
+        pointer-events: none;
+      }
+
+      .error-page__glow--1 {
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+        top: -150px;
+        right: -150px;
+      }
+
+      .error-page__glow--2 {
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+        bottom: -100px;
+        left: -100px;
+      }
+
+      .error-page__inner {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        max-width: 600px;
+        padding: 0 20px;
+      }
+
+      .error-page__code {
+        font-family: var(--font-display);
+        font-size: 120px;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--accent);
+        margin: 0;
+        background: linear-gradient(135deg, var(--accent), var(--accent-dk));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .error-page__title {
+        font-family: var(--font-display);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 20px 0 16px;
+        color: var(--text);
+      }
+
+      .error-page__desc {
+        font-size: 18px;
+        color: var(--muted);
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
+
+      .error-page__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 32px;
+        border-radius: var(--radius-md);
+        font-family: var(--font-body);
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+      }
+
+      .btn--primary {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .btn--primary:hover {
+        background: var(--accent-dk);
+        transform: translateY(-2px);
+      }
+
+      .btn--ghost {
+        background: transparent;
+        color: var(--text);
+        border-color: var(--border);
+      }
+
+      .btn--ghost:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      @media (max-width: 767px) {
+        .error-page__code {
+          font-size: 80px;
+        }
+
+        .error-page__title {
+          font-size: 24px;
+        }
+
+        .error-page__desc {
+          font-size: 16px;
+        }
+
+        .error-page__glow--1 {
+          width: 300px;
+          height: 300px;
+          top: -100px;
+          right: -100px;
+        }
+
+        .error-page__glow--2 {
+          width: 250px;
+          height: 250px;
+          bottom: -50px;
+          left: -50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="/" class="header__logo">
+          <img
+            src="assets/logo.png"
+            alt="Leme Contabilidade"
+            width="121"
+            height="40"
+            decoding="async"
+          />
+        </a>
+        <nav class="nav" id="nav">
+          <a href="/#beneficios" class="nav__link">Benefícios</a>
+          <a href="/#contadora" class="nav__link">A contadora</a>
+          <a href="/#como-funciona" class="nav__link">Como funciona</a>
+          <a href="/#planos" class="nav__link">Planos</a>
+          <a href="/#contato" class="nav__link">Contato</a>
+        </nav>
+        <a
+          href="https://wa.me/5519987834833?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20a%20Leme%20Contabilidade."
+          class="btn btn--accent header__cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Falar no WhatsApp
+        </a>
+      </div>
+    </header>
+
+    <div class="error-page">
+      <div class="error-page__glow error-page__glow--1" aria-hidden="true"></div>
+      <div class="error-page__glow error-page__glow--2" aria-hidden="true"></div>
+
+      <div class="error-page__inner">
+        <h1 class="error-page__code">404</h1>
+        <h2 class="error-page__title">Página não encontrada</h2>
+        <p class="error-page__desc">
+          Desculpe, a página que você está procurando não existe. Mas a gente
+          está aqui para te ajudar com contabilidade, impostos e folha de
+          pagamento.
+        </p>
+        <div class="error-page__actions">
+          <a href="/" class="btn btn--primary">Voltar ao início</a>
+          <a
+            href="https://wa.me/5519987834833?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20a%20Leme%20Contabilidade."
+            class="btn btn--ghost"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a href="/"
+            ><img
+              src="assets/logo.png"
+              alt="Leme Contabilidade"
+              width="109"
+              height="36"
+              loading="lazy"
+              decoding="async"
+          /></a>
+          <p>
+            Empresa contábil em Limeira, com atendimento em todo o estado de São
+            Paulo, especializada em impulsionar o seu negócio com precisão e
+            segurança.
+          </p>
+        </div>
+        <nav class="footer__nav">
+          <span class="footer__col-title">Menu</span>
+          <a href="/#beneficios">Benefícios</a>
+          <a href="/#como-funciona">Como funciona</a>
+          <a href="/#planos">Planos</a>
+          <a href="/#contato">Contato</a>
+        </nav>
+        <div class="footer__contact">
+          <span class="footer__col-title">Contato</span>
+          <a
+            href="https://wa.me/5519987834833"
+            target="_blank"
+            rel="noopener noreferrer"
+            >(19) 98783-4833</a
+          >
+          <a href="mailto:lemecc@lemecc.com.br">lemecc@lemecc.com.br</a>
+          <a
+            href="https://instagram.com/leme.contabilidade"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@leme.contabilidade</a
+          >
+          <address class="footer__address">
+            Rua Samuel Chequi, 107 — Jardim Montezuma<br />
+            Limeira/SP · CEP 13480-355
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p>&copy; 2026 Leme Contabilidade. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

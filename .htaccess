@@ -1,0 +1,16 @@
+# Bloqueia acesso HTTP a arquivos e pastas de desenvolvimento que continuam
+# na raiz do projeto (instruções para ferramentas de IA, não fazem parte do site).
+<FilesMatch "^CLAUDE\.md$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+RedirectMatch 404 ^/\.impeccable(/.*)?$
+
+# Página de erro 404 customizada
+ErrorDocument 404 /404.html
